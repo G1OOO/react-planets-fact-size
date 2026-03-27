@@ -1,0 +1,507 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=League+Spartan:wght@100..900&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #070724;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image: url("/src/assets/background-stars.svg");
+  z-index: -1;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "League Spartan";
+  transition: 0.2s;
+}
+
+header {
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  align-items: center;
+  position: relative;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 65px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: white;
+  opacity: 20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header h1 {
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: -1.05px;
+  color: white;
+  font-family: "Antonio";
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.planets {
+  display: flex;
+  gap: 35px;
+}
+
+.planets a {
+  color: white;
+  font-size: 11px;
+  letter-spacing: 1px;
+  opacity: 0.75;
+  position: relative;
+}
+
+.planets a:hover {
+  opacity: 1;
+}
+
+.planets p {
+  font-family: "League Spartan";
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.title {
+  font-family: "Antonio";
+  font-weight: 400;
+  font-size: 80px;
+  color: white;
+  margin: 0;
+}
+
+.details {
+  font-family: "League Spartan";
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 25px;
+  color: white;
+  opacity: 0.75;
+  width: 350px;
+  height: auto;
+}
+
+.source {
+  font-family: "League Spartan";
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  opacity: 0.5;
+}
+
+.source a {
+  font-family: "League Spartan";
+  font-weight: 700;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.buttons-overview {
+  height: 176px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.buttons-overview button {
+  height: 48px;
+  width: 350px;
+  background-color: transparent;
+  border: solid 1px #26263f;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding-left: 30px;
+}
+
+.buttons-overview button:hover {
+  background-color: #26263f;
+}
+
+.buttons-overview button span {
+  color: white;
+  font-family: "League Spartan";
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 2.57px;
+}
+
+.buttons-overview button p {
+  font-family: "League Spartan";
+  font-weight: 700;
+  letter-spacing: 2.57px;
+  font-size: 12px;
+  color: white;
+  opacity: 0.5;
+  margin-right: 50px;
+}
+
+.specifics {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+  margin-top: 80px;
+}
+
+.specifics div {
+  height: 128px;
+  width: 255px;
+  border: solid 1px #26263f;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.specifics div p {
+  margin: 0;
+  font-family: "League Spartan";
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: white;
+  opacity: 0.5;
+}
+
+.specifics div h1 {
+  font-family: "Antonio";
+  margin: 0;
+  font-weight: 400;
+  font-size: 400;
+  letter-spacing: -1.5px;
+  color: white;
+}
+
+.planet {
+  position: relative;
+}
+
+.planet .geology {
+  position: absolute;
+  height: 199px;
+  width: 163px;
+  top: 60%;
+}
+
+.list {
+  display: none;
+  cursor: pointer;
+  width: 24px;
+  height: 17px;
+  align-self: center;
+}
+
+.buttons-list-mobile {
+  display: none;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 15px;
+  position: relative;
+}
+
+.buttons-list-mobile::before {
+  content: "";
+  position: absolute;
+  bottom: 8px;
+  height: 1px;
+  width: 150%;
+  background-color: #ffffff;
+  opacity: 25%;
+}
+
+.buttons-list-mobile p {
+  color: white;
+  font-weight: 700;
+  font-size: 9px;
+  letter-spacing: 1.93px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+.top-mobile {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.pages {
+  background-color: #070724;
+  height: 130vh;
+  width: 100%;
+  position: absolute;
+  z-index: 67;
+  transform: translateY(-20px);
+}
+
+.pages .planets {
+  display: block;
+}
+
+.pages-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #26263f;
+}
+
+.pages-top .list {
+  transform: translateY(3px);
+}
+
+.pages-top h1 {
+  font-weight: 400;
+  font-size: 28px;
+  letter-spacing: -1.05px;
+  color: white;
+  margin: 0;
+}
+
+.pages .planets {
+  display: flex;
+  flex-direction: column;
+  height: 487px;
+  margin-top: 40px;
+  margin-left: 20px;
+  gap: 20px;
+}
+
+.pages .planets a {
+  opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 10%;
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 1.36px;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #26263f;
+}
+
+.mobile-planet-left {
+  display: flex;
+  gap: 20px;
+}
+
+.pages .planets a .arrow {
+  height: 9px;
+  width: 5px;
+}
+
+@media (max-width: 1000px) {
+  header {
+    flex-direction: column;
+    margin: 0;
+    gap: 20px;
+  }
+  header::before {
+    top: 130px;
+  }
+
+  .top-mobile {
+    flex-direction: column;
+  }
+
+  .top {
+    flex-direction: column;
+    padding-top: 100px;
+    gap: 100px;
+  }
+
+  .info {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .infos {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .infos .title {
+    font-size: 48px;
+  }
+
+  .infos .details {
+    font-size: 11px;
+  }
+
+  .specifics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .specifics div {
+    height: 88px;
+    width: 164px;
+    padding: 0;
+    align-items: center;
+  }
+
+  .specifics div p {
+    font-size: 8px;
+    letter-spacing: 0.73px;
+  }
+
+  .specifics div h1 {
+    font-size: 24px;
+  }
+
+  .planet .geology {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 768px) {
+  .buttons-overview {
+    display: none;
+  }
+
+  .planets {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .top {
+    gap: 50px;
+    padding-top: 20px;
+  }
+
+  .top-mobile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .top-mobile h1 {
+    margin: 0;
+  }
+
+  header::before {
+    top: 110%;
+  }
+
+  .infos {
+    text-align: center;
+  }
+
+  .list {
+    display: block;
+  }
+
+  .buttons-list-mobile {
+    display: block;
+    display: flex;
+  }
+
+  .top .title {
+    font-size: 40px;
+  }
+
+  .top .details {
+    font-size: 11px;
+  }
+
+  .top .source {
+    font-size: 12px;
+  }
+
+  .specifics {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .specifics div {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 11%;
+    padding-right: 11%;
+    height: 48px;
+    width: 327px;
+  }
+
+  .specifics div p {
+    font-size: 8px;
+  }
+
+  .specifics div h1 {
+    font-size: 20px;
+  }
+
+  .planet .geology {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 370px) {
+  .infos {
+    width: auto;
+  }
+
+  .details {
+    width: auto;
+  }
+
+  .specifics div {
+    width: 90%;
+  }
+}
