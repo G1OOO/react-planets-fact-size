@@ -115,8 +115,19 @@ export default function Planets() {
   const overlayImage =
     viewTab === "surface"
       ? assetMap[currentPlanet.name.toLowerCase()].surface
-      : "";
-
+      : undefined;
+  {
+    overlayImage && (
+      <img
+        src={overlayImage}
+        alt=""
+        className="geology"
+        style={{
+          left: currentPlanet.left,
+        }}
+      />
+    );
+  }
   const dynamicSize =
     screenWidth <= 768
       ? currentPlanet.responsive.mobile
@@ -230,15 +241,17 @@ export default function Planets() {
               style={{ width: dynamicSize }}
             />
 
-            <img
-              src={overlayImage}
-              alt=""
-              className="geology"
-              style={{
-                display: overlayImage === "" ? "none" : "block",
-                left: currentPlanet.left,
-              }}
-            />
+            {viewTab === "surface" && overlayImage && (
+              <img
+                src={overlayImage}
+                alt="geology"
+                className="geology"
+                style={{
+                  left: currentPlanet.left,
+                  position: "absolute",
+                }}
+              />
+            )}
           </div>
 
           <div className="info">
