@@ -177,14 +177,13 @@ a {
 .specifics {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: center;
   gap: 20px;
   margin-bottom: 50px;
   margin-top: 80px;
 }
 
 .specifics div {
-  flex: 1;
   height: 128px;
   width: 255px;
   border: solid 1px #26263f;
@@ -210,7 +209,7 @@ a {
   font-family: "Antonio";
   margin: 0;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 48px;
   letter-spacing: -1.5px;
   color: white;
 }
